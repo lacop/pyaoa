@@ -37,7 +37,7 @@ def write(device, data, timeout = None):
 	if timeout is None:
 		return device.write(0x04, data, 0)
 	else:
-		return device.write(0x04, data, timeout)
+		return device.write(0x04, data, 0, timeout)
 	
 def read(device, length, timeout = None):
 	if timeout is None:
